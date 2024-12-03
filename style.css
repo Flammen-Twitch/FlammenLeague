@@ -25,7 +25,7 @@ html {
 
 body {
 	overflow: scroll;
-	gap: calc(var(--size-unit) * 2);
+	gap: calc(var(--size-unit) * 4) !important;
 }
 
 .flex-column {
@@ -57,8 +57,9 @@ footer {
 	backdrop-filter: blur(10px);
 }
 
-li {
-	padding: calc(var(--size-unit) / 4) 0;
+ul, li {
+	padding-top: calc(var(--size-unit) / 4);
+	padding-bottom: calc(var(--size-unit) / 4);
 }
 
 a {
@@ -82,4 +83,9 @@ a {
 	z-index: -1;
 	opacity: 0.25;
 	animation: diagonal-scroll 120s linear infinite;
+	filter: blur(3px);
+}
+
+.red-heart {
+	color: var(--color-red);
 }
