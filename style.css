@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+	--color-white: #FFFAEF;
+	--color-yellow: #FAC748;
+	--color-red: #EF2D56;
+	--size-unit: 24px;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: "Noto Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
+}
+
+html {
+	background: url("./img/Background.png") no-repeat center;
+	background-size: cover;
+	color: var(--color-white);
+	padding: calc(var(--size-unit) * 2);
+	min-height: 100vh;
+}
+
+body {
+	overflow: scroll;
+	gap: calc(var(--size-unit) * 2);
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: calc(var(--size-unit) / 2);
+}
+
+.flex-row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: calc(var(--size-unit) * 5);
+}
+
+main {
+	align-items: flex-start !important;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	padding: calc(var(--size-unit) / 4);
+	background-color: rgba(0, 0, 0, 0.25); /* Optionnel : pour une meilleure lisibilité */
+	backdrop-filter: blur(10px);
+}
+
+li {
+	padding: calc(var(--size-unit) / 4) 0;
+}
+
+a {
+	color: var(--color-yellow);
+	text-decoration: none;
+}
+
+@keyframes diagonal-scroll {
+	0% {
+		background-position: 100% 100%;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+#background {
+	position: fixed;
+	inset: 0;
+	background: url("./img/Pattern.png") repeat;
+	z-index: -1;
+	opacity: 0.25;
+	animation: diagonal-scroll 120s linear infinite;
+}

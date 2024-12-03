@@ -3,11 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
 	<title>Flammen'League Pokémon TCGP</title>
 </head>
-<body>
-	<h1>Flammen'League Pokémon TCGP</h1>
-	<main>
+<body class="flex-column">
+	<header class="flex-column flex-center">
+		<div id="header-imgs" class="flex-row">
+			<img src="./img/Logo.png" alt="Logo Flammen'League">
+			<img src="./img/Pokémon TCGP.png" alt="Logo Pokémon TCG Pocket">
+		</div>
+		<h1>Flammen'League Pokémon TCGP</h1>
+	</header>
+	<main class="flex-row">
 		<section>
 			<h3>Tournois</h3>
 			<ul>
@@ -42,10 +49,23 @@
 		<section>
 			<h3>Visuels</h3>
 			<ul>
-				<li><a href="./img/Logo.png" target="_blank">Logo</a></li>
+				<li>
+					Logos
+					<ul>
+						<li><a href="./img/Logo.png" target="_blank">Flammen'League</a></li>
+						<li><a href="./img/Pokémon TCGP.png" target="_blank">Pokémon TCGP</a></li>
+					</ul>
 				<li><a href="./img/Fond.png" target="_blank">Fond</a></li>
+				<li><a href="./background.html" target="_blank">Fond animé</a></li>
 			</ul>
 		</section>
 	</main>
+	<div id="background"></div>
+	<footer>
+		<p>© <span id="year"></span> Flammen'Twitch</p>
+	</footer>
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
 </body>
 </html>
